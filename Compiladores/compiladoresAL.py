@@ -40,7 +40,6 @@ def analisador_lexico_simples(codigo_fonte):
                 tokens_encontrados.append(('PALAVRA_CHAVE', palavra, linha_atual))
             else:
                 tokens_encontrados.append(('IDENTIFICADOR', palavra, linha_atual))
-
             continue
 
         # Identificação de números inteiros
@@ -140,9 +139,8 @@ codigo = '''
 se (x === 10) {
   1y = 5;
   1z = 1y +- 3; | 
+  x = 10 + 90
   // Isto é um comentário
-  4
-  allex guei <- se vc leu isso vc eh bem guei
 }
 '''
 
