@@ -141,11 +141,7 @@ se (x === 10) {
   1z = 1y +- 3; | 
   x = 10 + 90
   // Isto é um comentário
-<<<<<<< HEAD
   estou enviando commit da main
-=======
-  apaguei as mudancas do main, quero enviar esse arquivo aquiasdasdasdasd
->>>>>>> pc-ds
 }
 '''
 
@@ -171,4 +167,3 @@ if erros:
         print(erro)
 else:
     print("\nNenhum erro léxico encontrado.")
-print("\ncavalooooooooooooooooooooooooooooooooooooooooooooooooo")
