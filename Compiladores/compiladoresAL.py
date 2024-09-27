@@ -167,3 +167,4 @@ if erros:
         print(erro)
 else:
     print("\nNenhum erro léxico encontrado.")
+print("\ncavalooooooooooooooooooooooooooooooooooooooooooooooooo")
