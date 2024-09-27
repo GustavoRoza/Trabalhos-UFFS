@@ -141,7 +141,7 @@ se (x === 10) {
   1z = 1y +- 3; | 
   x = 10 + 90
   // Isto é um comentário
-  apaguei as mudancas do main, quero enviar esse arquivo aqui
+  estou enviando commit da main
 }
 '''
 
