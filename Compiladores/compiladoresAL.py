@@ -141,8 +141,7 @@ se (x === 10) {
   1z = 1y +- 3; | 
   x = 10 + 90
   // Isto é um comentário
-  estou fazendo um teste 
-  opaaaaa
+  estou enviando commit da main
 }
 '''
 
