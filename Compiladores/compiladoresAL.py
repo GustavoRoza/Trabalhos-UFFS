@@ -143,7 +143,6 @@ se (x === 10) {
   // Isto é um comentário
   estou fazendo um teste 
   opaaaaa
-  estou no pc-ds
 }
 '''
 
