@@ -1,3 +1,6 @@
+#Trabalho incompleto, eh necessario armazenar os estados dos 
+#automatos, e também fazer uma verificacao de erros melhor, ja que 
+#está analisando apenas caractere por caractere, e deve analisar 
 palavras_chave = ['se', 'senao', 'enquanto', 'para', 'retorne']
 
 def e_operador_aritmetico(char):
