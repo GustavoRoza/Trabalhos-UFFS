@@ -72,9 +72,20 @@ def analisador_lexico_simples(codigo_fonte):
 
         # Operadores aritméticos
         if e_operador_aritmetico(char_atual):
-            tokens_encontrados.append(('OPERADOR_ARITMETICO', char_atual, linha_atual))
+            operador_completo = char_atual  # Inicializa com o operador atual
+            while posicao_atual + 1 < len(codigo_fonte) and e_operador_aritmetico(codigo_fonte[posicao_atual + 1]):
+                operador_completo += codigo_fonte[posicao_atual + 1]
+                posicao_atual += 1
+            
+            if len(operador_completo) > 1:
+                erros_encontrados.append(f"Erro léxico: '{operador_completo}' não reconhecido na linha {linha_atual}")
+                tokens_encontrados.append(('ERRO', operador_completo, linha_atual))
+            else:
+                tokens_encontrados.append(('OPERADOR_ARITMETICO', operador_completo, linha_atual))
+            
             posicao_atual += 1
             continue
+
 
         # Delimitadores
         if e_delimitador(char_atual):
@@ -128,7 +139,7 @@ def criar_fita_saída(tokens):
             fita.append('opa')
         elif token[0] == 'ERRO':
             fita.append('E')
-        elif token[0] == 'NUMERO_INTEIRO':  # Corrigido de NUMEROS_INTEIRO
+        elif token[0] == 'NUMERO_INTEIRO':  
             fita.append('N')
         elif token[0] == 'FIM':
             fita.append('$')
@@ -137,8 +148,8 @@ def criar_fita_saída(tokens):
 # Exemplo de código fonte
 codigo = '''
 se (x == 10) {
-  y = 5; |
-  z = 1 +- 3;
+  y = 5; | 
+  idade = 21 + 3;
   x = 10 + 90;
   // Isto é um comentario 
 }
