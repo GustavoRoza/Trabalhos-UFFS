@@ -151,7 +151,7 @@ se (x == 10) {
   y = 5; | 
   idade = 21 + 3;
   x = 10 + 90;
-  // Isto é um comentario 
+  // Isto é um comentario ||||
 }
 '''
 
